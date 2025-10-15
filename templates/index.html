@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top 10 Crypto Prices</title>
+</head>
+<body>
+    <h1>Top 10 Cryptocurrencies</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Current Price (USD)</th>
+            <th>Market Cap</th>
+        </tr>
+        {% for coin in data %}
+        <tr>
+            <td>{{ coin.name }}</td>
+            <td>{{ coin.symbol }}</td>
+            <td>{{ coin.current_price }}</td>
+            <td>{{ coin.market_cap }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/download">Download CSV</a>
+</body>
+</html>
+
+
