@@ -6,9 +6,14 @@ import io
 app = Flask(__name__)
 
 def fetch_crypto_data():
+    """
+    Fetches cryptocurrency market data from the CoinGecko API.
+
+    Returns:
+        list: A list of dictionaries containing data for the top 10 cryptocurrencies by market cap.
+    """
     url = "https://api.coingecko.com/api/v3/coins/markets"
     params = {
-        "vs_currency": "usd",
         "order": "market_cap_desc",
         "per_page": 10,
         "page": 1,
